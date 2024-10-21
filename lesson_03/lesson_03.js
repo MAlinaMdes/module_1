@@ -26,13 +26,15 @@
  
     const typeOfGood = prompt('Тип товара', '');
 
-    console.log(typeof(priceOfGood));
-    console.log(typeof(countOfGood));
-    console.log(`На складе ${countOfGood} единицы товара "${nameOfGood}" на сумму ${priceOfGood * countOfGood} ${typeOfGood}`);
+    // console.log(typeof(priceOfGood));
+    // console.log(typeof(countOfGood));
+    // console.log(`На складе ${countOfGood} единицы товара "${nameOfGood}" на сумму ${priceOfGood * countOfGood} ${typeOfGood}`);
   
-    if (priceOfGood != Number) {
-      console.log('Вы ввели неккоректные данные!')
-    }
+   
+    if (Number.isFinite(priceOfGood)) {
+      console.log(`На складе ${countOfGood} единицы товара "${nameOfGood}" на сумму ${priceOfGood * countOfGood} ${typeOfGood}`);
+    } else
+       console.log('Вы ввели неккоректные данные!')
 
 
 
