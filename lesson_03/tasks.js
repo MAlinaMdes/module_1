@@ -11,7 +11,7 @@ if (rain == 1) {
 } else if (rain == 0) {
     console.log ('Дождя нет')
 }
-задача 3
+// задача 3
 
 const mathematic = Number(prompt('Введите кол-во баллов по математике', ''));
 const rusLang = Number(prompt('Введите кол-во баллов по русскому языку',''));
@@ -22,7 +22,7 @@ const totalScore = mathematic + rusLang + computerScore;
 if (totalScore >= 265) {
     console.log('Поздравляю, вы поступили на бюджет!')
 }
-task 4 
+// task 4 
 
 const amountOfMoney = Number(prompt('Какую суммы вы желаете снять',''));
 if (amountOfMoney % 100 === 0 ) {
