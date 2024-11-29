@@ -9,16 +9,37 @@
 // При сумме, превышающей 30 000, применяется скидка 15% к сумме превышения
 // Если промокод равен "METHED", то скидка 10%
 // Если промокод равен "G3H2Z1", то скидка 500 рублей, но только если сумма  корзины после предыдущих скидок превышает 2000р
+    let calculate = (total, goods, promo) => {
 
-const calculate = (total, goods, promo) => {
-    let numberGoods = goods;
+
     let totalNew = total;
-    if (numberGoods > 10) return totalNew * .97;
     
-     if (totalNew > 30000) return (totalNew - 30000) * 0.85;
-     if (promo == 'Methed') return totalNew * 0.9;
-     if (promo == 'G3H2Z1' && totalNew > 2000) return totalNew - 500;
+    
+    if (goods > 10) {
+         const discountThree = total * .03;
+         totalNew -= discountThree;
+        //  console.log (totalNew)
+    } 
+
+    if (total > 30000 ) {
+        const discountFifteen = (totalNew - 30000) * .85;
+        
+        totalNew -= discountFifteen ;
+        // console.log (totalNew);
+    }
+   
+    if (promo = 'METHED' && promo != 'G3H2Z1') {
+        const discountTen = totalNew * 0.1;
+        totalNew -= discountTen;
+        // console.log (totalNew);
+
+    }  else if (promo = 'G3H2Z1' && totalNew > 2000) {
+        
+        totalNew -= 500;
+        // console.log (totalNew);
+    } 
+    return totalNew;
 }
 
-const result = calculate(40000,12,'G3H2Z1');
-console.log(result)
+  ;
+   console.log(calculate (30000, 12, 'G3H2Z1'));

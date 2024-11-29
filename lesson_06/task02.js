@@ -14,11 +14,11 @@
 // Используйте цикл for в функции
 
 
-  const isPrime = (num) => {
-    for (let i = 1; i <= 152; i++) {
-        if (num % i === num || num % i === 1) return true;
-    }return false;
+//   const isPrime = (num) => {
+//     for (let i = 1; i <= 152; i++) {
+//         if (num % i === num || num % i === 1) return true;
+//     }return false;
 
-  }
+//   }
   
- console.log(isPrime(2));
+//  console.log(isPrime(2));
