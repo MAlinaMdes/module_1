@@ -41,5 +41,6 @@
     return totalNew;
 }
 
-  ;
+  
    console.log(calculate (30000, 12, 'G3H2Z1'));
+   
