@@ -26,12 +26,12 @@
 //  console.log(isPrime(10));
 
  let isPrime = (num) => {
-    for (let i = 2; i <= num; i++) {
+    for (let i = 2; i < num; i++) {
         
-            if (i % num === num || i % num === 0) return true;
+            if (num % i == 0) return false;
     }
-     return false;
+     return true;
 
   }
   
- console.log(isPrime(10));
+ console.log(isPrime(5));
