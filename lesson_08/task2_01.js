@@ -10,28 +10,49 @@ function guessNumber (min, max) {
     
     let randomNumber = Math.floor(Math.random() * (max- min + 1)) + min;
      console.log(randomNumber)
-    while(true) {
- 
-        let userNumber =  prompt(`Введите число`);
- 
-             
-            if (userNumber > randomNumber) {
-                prompt(`Меньше!Введите новый вариант`);  
-            }
-            else if (userNumber < randomNumber ) {
-                prompt(`Больше!Введите новый вариант`);
-            }
-            else if (userNumber == randomNumber)  {
-                alert(`Правильно!`);
-            } 
-             else if(userNumber == isNaN) {
-                    prompt(`Введите число`);
+     
+       
 
-                }                
-                                          
-            }
-         }
+        while (true) {
+            let userNumber = (prompt(`Введите число`));
+            if (userNumber === null) {
+                break ;
+                       
+        }
+        userNumber = +userNumber;
+
+        if (userNumber === isNaN ) {
+            prompt(`Введите число`);
+        }  
+          
+      
+        if (userNumber > randomNumber)  { 
+                
+                prompt(`Меньше!Введите новый вариант`);  
+
+          } 
+           else  {
+                  prompt(`Больше!Введите новый вариант`);
+              }
+            if (userNumber === randomNumber) {
+           
+                alert(`Правильно!`);
+
+        }
+           
+      
+      
+
+     
+        }
+    }
+
+               
+    console.log(guessNumber(1, 100));                               
+               
+           
+         
     
  
  
-console.log(guessNumber(1, 100));
+
